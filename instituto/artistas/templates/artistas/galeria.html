@@ -1,0 +1,40 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block title %} GALERIA {% endblock %}
+
+{% block body %}
+    <div>
+        <h1>GALERIA</h1>
+    </div>
+    <div class="p-2">
+      <a href="{% url 'gestiongal'%}" class="btn btn-primary">Gestion Galeria</a>
+    </div>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <!--  DESDE BASE DE DATOS -->
+        {% for gal in galeria %}
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{{gal.img.url}}" alt="">
+            <div class="card-body">
+              <div class="card-text">
+                <p>{{gal.nombre}} <br>
+                  Historia de la obra		: {{gal.historia}} <br>
+                  Precio:             	: {{gal.precio}}
+                </p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="#" class="btn btn-primary btn-sm" role="button" aria-pressed="true">Comprar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        {% endfor %}
+        
+    </div>
+{% endblock %}
+

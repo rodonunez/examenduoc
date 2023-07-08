@@ -1,0 +1,127 @@
+{% extends "./base.html" %}
+{% block title %} INICIO {% endblock %}
+
+{% block body %}
+{% load static %}
+
+<!-- CARRUSEL -->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'img/car_/img_1.jfif' %}" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Grupo Cero</h5>
+            <p>Venta de cuadros de pintura.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'img/car_/img_2.jfif' %}" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Grupo Cero</h5>
+            <p>Venta de cuadros de pintura.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'img/car_/img_3.jfif' %}" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Grupo Cero</h5>
+            <p>Venta de cuadros de pintura.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+</div>
+
+<!-- INTRODUCCION DE SERVICIOS-->
+<!--=============================== -->
+<h1>LOS MAS VENDIDOS</h1>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+  <div class="col">
+          <div class="card shadow-sm">
+              <img src="{% static 'img/gal_/imagen9.jpg'%}" alt="">
+              <div class="card-body">
+                  <p class="card-text">NACIMIENTO LOCO</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+              </div>
+          </div>
+  </div>
+  <div class="col">
+          <div class="card shadow-sm">
+              <img src="{% static 'img/gal_/imagen8.jpg'%}" alt="">
+              <div class="card-body">
+                  <p class="card-text">DERRETIDO</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+              </div>
+          </div>
+  </div>
+  <div class="col">
+          <div class="card shadow-sm">
+              <img src="{% static 'img/gal_/imagen7.jpg'%}" alt="">
+              <div class="card-body">
+                  <p class="card-text">VALPARAISO</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+              </div>
+          </div>
+  </div>
+  <div class="col">
+          <div class="card shadow-sm">
+              <img src="{% static 'img/gal_/imagen6.jpg'%}" alt="">
+              <div class="card-body">
+                  <p class="card-text">NAIPE</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+              </div>
+          </div>
+  </div>
+  <div class="col">
+          <div class="card shadow-sm">
+              <img src="{% static 'img/gal_/imagen5.jpg'%}" alt="">
+              <div class="card-body">
+                  <p class="card-text">SANDIA CALADA</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+              </div>
+          </div>
+  </div>
+  <div class="col">
+          <div class="card shadow-sm">
+              <img src="{% static 'img/gal_/imagen4.jpg'%}" alt="">
+              <div class="card-body">
+                  <p class="card-text">NACIMIENTO LOCO</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+              </div>
+          </div>
+  </div>
+</div>
+
+
+
+<section id="busqueda">
+  <h2>B&uacutesqueda</h2>
+  <form>
+    <label for="busqueda">Buscar por nombre de artista, tipo de arte o concepto:</label>
+    <input type="text" name="busqueda" autocomplete="off" />
+    <input type="submit" value="Buscar" />
+  </form>
+</section>
+
+
+{% endblock %}
+
+
